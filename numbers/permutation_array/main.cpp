@@ -25,10 +25,13 @@ int main() {
 		for(int i = 0; i < n; i++)
 			arr[i] = i + 1;
 		
-		int num = rand() % n;
+		int num = 10 * n;
 
-		while(num--)
-			next_permutation(arr, arr + n);
+		while(num--) {
+			int ind1 = rand() % n;
+			int ind2 = rand() % n;
+			swap(arr[ind1], arr[ind2]);
+		}
 
 		vector <int> vec1, vec2;
 
